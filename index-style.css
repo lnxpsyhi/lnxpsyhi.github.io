@@ -1,0 +1,22 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ee82ee;
+}
+
+nav > ul {
+    background-color: #9400d3;
+    color: #ffffff;
+    display: flex;
+    column-gap: 10px;
+    justify-content: flex-end;
+}
+
+nav > ul li {
+    list-style: none;
+    padding: .5rem;
+}
+
+nav > ul > li:hover {
+    cursor: pointer;
+    color: #ffff00;
+}
