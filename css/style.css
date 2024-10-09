@@ -1,0 +1,80 @@
+
+@font-face {
+    font-family: "Fontawesome";
+    src: url(/assets/fontawesome-free-6.6.0-web/webfonts/fa-solid-900.ttf);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* background: linear-gradient(to right, #a020f0, yellow); */
+}
+
+nav {
+    position: relative;
+}
+
+#nav-btn {
+    background: none;
+    border: none;
+}
+
+#nav-btn::before {
+    content: '\f0c9';
+    font-family: 'Fontawesome';
+    font-size: 24px;
+}
+
+#nav-btn:focus:before {
+    content: '\f00d';
+}
+
+#navigation {
+    display: none;
+    list-style-type: none;
+    background: gray;
+    position: absolute;
+    padding-left: 0;
+    margin: 0;
+    /* opacity: 0; */
+    transition: opacity .1s linear;
+    padding: .75rem;
+    z-index: 1;
+}
+
+#navigation a {
+    text-decoration: none;
+}
+
+#navigation a:hover {
+    font-weight: bold;
+}
+
+nav > #nav-btn:focus + #navigation {
+    /* opacity: 1; */
+    display: block;
+}
+
+@media only screen and (width >= 768px) {
+    #nav-btn {
+        display: none;
+    }
+
+    #navigation {
+        display: flex;
+        gap: 1em;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+        /* opacity: 1; */
+        position: relative;
+    }
+}
