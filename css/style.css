@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: "Fontawesome";
-    src: url(/assets/fontawesome-free-6.6.0-web/webfonts/fa-solid-900.ttf);
+    src: url(/assets/icons/webfonts/fa-solid-900.ttf), url(/assets/icons/webfonts/fa-solid-900.woff2);
 }
 
 *,
