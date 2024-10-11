@@ -9,13 +9,6 @@
 }
 
 :root {
-    /* Color Palette */
-    /* 
-    #3A1078
-    #4E31AA
-    #3795BD
-    #F7F7F8
-    */
     --bg-color: #000;
     --color: #fff;
 }
@@ -72,7 +65,11 @@ nav>label::after {
 
 #navigation span>a {
     text-decoration: none;
-    color: #2E073F;
+    color: #000;
+}
+
+#navigation span>a:hover {
+    color: purple;
 }
 
 #nav-btn:checked~label::after {
@@ -127,15 +124,15 @@ nav>label::after {
 }
 
 #dropdown-btn + label {
-    color: #fff;
+    color: #000;
 }
 
 #dropdown-btn + label:hover {
-    color: #ffff00;
+    color: purple;
 }
 
 #banner {
-    background: url(/assets/images/starry-sky-2051448_1280.jpg) no-repeat;
+    background: #a020f0;
 }
 
 #banner > h1 {
@@ -165,7 +162,7 @@ nav>label::after {
     }
 
     #navigation li>span>i[class*="fa"] {
-        color: #fff;
+        color: #a020f0;
     }
 
     #navigation span i {
@@ -207,6 +204,14 @@ nav>label::after {
 
     #nav-btn:checked~#navigation {
         display: flex;
+    }
+
+    #navigation li>span>label {
+        color: #fff;
+    }
+
+    #navigation li>span>label:hover {
+        color: yellow;
     }
 }
 
