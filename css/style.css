@@ -90,32 +90,34 @@ div>a {
 
 #navigation li span > .dropdown {
     position: relative;
-    background: #fff;
+    /* background: #fff;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-    z-index: 2;
+    z-index: 2; */
 }
 
 #navigation li span > .dropdown > .dropdown-menu {
     width: 100%;
     background: #fff;
     box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    display:none;
     position: absolute;
-    opacity: 0;
-    transition: opacity .1s ease-out;
+    /* opacity: 0; */
+    /* transition: opacity .1s ease-out; */
     padding: .25rem;
+    top: calc(100% + .25rem);
+    z-index: 2;
 }
 
 #dropdown-btn {
     display: none;
-    color: inherit;
-    font-size: inherit;
-    cursor: pointer;
 }
 
 #dropdown-btn:checked~.dropdown > .dropdown-menu {
-    opacity: 1;
+    /* opacity: 1; */
+    display: flex;
+    flex-direction: column;
 }
 
 #navigation li span label::after {
