@@ -28,8 +28,6 @@ body {
 header {
     position: sticky;
     top: 0;
-    /* background: #fff; */
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, .1); */
     display: flex;
 }
 
@@ -63,7 +61,6 @@ nav>label::after {
     padding: .75rem;
     margin: 0;
     z-index: 1;
-    /* text-wrap: nowrap; */
 }
 
 #navigation span>a,
@@ -71,10 +68,6 @@ div>a {
     text-decoration: none;
     color: #000;
 }
-
-/* #navigation span>a:hover {
-    color: #ffff00;
-} */
 
 #nav-btn:checked~label::after {
     content: "\f00d";
@@ -88,23 +81,16 @@ div>a {
     display: none;
 }
 
-#navigation li span > .dropdown {
+#navigation li span>.dropdown {
     position: relative;
-    /* background: #fff;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-    z-index: 2; */
 }
 
-#navigation li span > .dropdown > .dropdown-menu {
+#navigation li span>.dropdown>.dropdown-menu {
     width: 100%;
     background: #fff;
     box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
-    /* display: flex;
-    flex-direction: column; */
-    display:none;
+    display: none;
     position: absolute;
-    /* opacity: 0; */
-    /* transition: opacity .1s ease-out; */
     padding: .25rem;
     top: calc(100% + .25rem);
     z-index: 2;
@@ -114,8 +100,7 @@ div>a {
     display: none;
 }
 
-#dropdown-btn:checked~.dropdown > .dropdown-menu {
-    /* opacity: 1; */
+#dropdown-btn:checked~.dropdown>.dropdown-menu {
     display: flex;
     flex-direction: column;
 }
@@ -124,16 +109,12 @@ div>a {
     content: "\f078";
     font-family: "Fa Solid";
     display: inline-block;
-    transition: transform .1s ease-in-out;
+    transition: transform .01s ease-in-out;
 }
 
 #dropdown-btn:checked~label::after {
-    transform:translateY(2px);
+    transform: translateY(2px);
 }
-
-/* #dropdown-btn:checked~label::after {
-    content: "\f078";
-} */
 
 @media only screen and (width >=768px) {
     nav {
@@ -174,7 +155,6 @@ div>a {
 
     #navigation span>a::before {
         content: "";
-        /* width: 100%; */
         width: 0;
         height: 4px;
         background: #000;
