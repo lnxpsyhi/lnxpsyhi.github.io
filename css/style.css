@@ -9,6 +9,13 @@
 }
 
 :root {
+    /* Color Palette */
+    /* 
+    #3A1078
+    #4E31AA
+    #3795BD
+    #F7F7F8
+    */
     --bg-color: #000;
     --color: #fff;
 }
@@ -22,20 +29,19 @@
 body {
     margin: 0;
     padding: 0;
-    user-select: none;
 }
 
 header {
     position: sticky;
     top: 0;
     display: flex;
+    background: #2E073F;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
 }
 
 nav {
     position: relative;
     padding: .5rem;
-    background: #fff;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
     width: 100%;
     height: auto;
 }
@@ -49,13 +55,14 @@ nav>label::after {
     font-family: "Fa Solid";
     box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
     padding: .25rem;
+    color: #fff;
 }
 
 #navigation {
     list-style-type: none;
     display: none;
     position: absolute;
-    background: #fff;
+    background: #EBD3F8;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
     padding-left: 0;
     padding: .75rem;
@@ -63,10 +70,9 @@ nav>label::after {
     z-index: 1;
 }
 
-#navigation span>a,
-div>a {
+#navigation span>a {
     text-decoration: none;
-    color: #000;
+    color: #2E073F;
 }
 
 #nav-btn:checked~label::after {
@@ -86,14 +92,18 @@ div>a {
 }
 
 #navigation li span>.dropdown>.dropdown-menu {
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    background: #3795BD;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
     display: none;
     position: absolute;
-    padding: .25rem;
+    padding: .75rem;
     top: calc(100% + .25rem);
     z-index: 2;
+}
+
+#navigation li span>.dropdown>.dropdown-menu>a {
+    text-decoration: none;
+    color: #fff;
 }
 
 #dropdown-btn {
@@ -116,6 +126,25 @@ div>a {
     transform: translateY(2px);
 }
 
+#dropdown-btn + label {
+    color: #fff;
+}
+
+#dropdown-btn + label:hover {
+    color: #ffff00;
+}
+
+#banner {
+    background: url(/assets/images/starry-sky-2051448_1280.jpg) no-repeat;
+}
+
+#banner > h1 {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 14vw;
+}
+
 @media only screen and (width >=768px) {
     nav {
         position: unset;
@@ -135,21 +164,25 @@ div>a {
         box-shadow: none;
     }
 
+    #navigation li>span>i[class*="fa"] {
+        color: #fff;
+    }
+
     #navigation span i {
         display: inline-block;
     }
 
-    #navigation a {
-        color: #000;
-    }
+    /* #navigation li > span > a {
+        color: #fff;
+    } */
 
     #navigation span {
         position: relative;
         display: block;
     }
 
-    #navigation span>a {
-        color: #000;
+    #navigation li>span>a {
+        color: #fff;
         transition: color .1s ease-out;
     }
 
@@ -157,7 +190,7 @@ div>a {
         content: "";
         width: 0;
         height: 4px;
-        background: #000;
+        background: #EBD3F8;
         position: absolute;
         left: 0;
         bottom: -5px;
@@ -165,7 +198,7 @@ div>a {
     }
 
     #navigation span>a:hover {
-        color: #a020f0;
+        color: #ffff00;
     }
 
     #navigation a:hover::before {
