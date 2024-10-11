@@ -83,6 +83,7 @@ nav>label::after {
 
 #navigation li span>.dropdown {
     position: relative;
+    display: inline-block;
 }
 
 #navigation li span>.dropdown>.dropdown-menu {
@@ -164,10 +165,6 @@ nav>label::after {
         display: inline-block;
     }
 
-    /* #navigation li > span > a {
-        color: #fff;
-    } */
-
     #navigation span {
         position: relative;
         display: block;
@@ -207,6 +204,10 @@ nav>label::after {
 
     #navigation li>span>label:hover {
         color: yellow;
+    }
+
+    #navigation li span>.dropdown {
+        display: block;
     }
 }
 
