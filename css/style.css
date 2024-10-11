@@ -142,6 +142,18 @@ nav>label::after {
     font-size: 14vw;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    background: #000;
+    width: 100%;
+}
+
+footer>.wrapper {
+    text-align: center;
+    color: #fff;
+}
+
 @media only screen and (width >=768px) {
     nav {
         position: unset;
