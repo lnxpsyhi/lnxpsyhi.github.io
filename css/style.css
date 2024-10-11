@@ -82,10 +82,6 @@ nav>label::after {
     display: block;
 }
 
-/* #navigation li span i {
-    display: none;
-} */
-
 #navigation li span>.dropdown {
     position: relative;
 }
@@ -123,18 +119,6 @@ nav>label::after {
     opacity: .5;
 }
 
-/* 
-#navigation li span label::after {
-    content: "\f078";
-    font-family: "Fa Solid";
-    display: inline-block;
-    transition: transform .01s ease-in-out;
-}
-
-#dropdown-btn:checked~label::after {
-    transform: translateY(2px);
-} */
-
 #dropdown-btn + label {
     color: #000;
 }
@@ -152,12 +136,6 @@ nav>label::after {
     color: #fff;
     text-align: center;
     font-size: 14vw;
-}
-
-aside#related {
-    float: left;
-    background: #000;
-
 }
 
 @media only screen and (width >=768px) {
