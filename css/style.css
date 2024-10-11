@@ -86,7 +86,7 @@ nav>label::after {
     display: none;
 }
 
-@media only screen and (width >=768px) {
+@media only screen and (width >= 768px) {
     nav {
         position: unset;
     }
@@ -98,6 +98,7 @@ nav>label::after {
     #navigation {
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
         position: unset;
         gap: .75rem;
         background: none;
@@ -144,5 +145,11 @@ nav>label::after {
 
     #nav-btn:checked~#navigation {
         display: flex;
+    }
+}
+
+@media only screen and (width >= 992px) {
+    #navigation {
+        justify-content: flex-end;
     }
 }
