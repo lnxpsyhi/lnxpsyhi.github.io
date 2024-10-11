@@ -81,16 +81,16 @@ nav>label::after {
     display: block;
 }
 
-#navigation span i {
+/* #navigation li span i {
     display: none;
-}
+} */
 
 #navigation li span>.dropdown {
     position: relative;
 }
 
 #navigation li span>.dropdown>.dropdown-menu {
-    background: #3795BD;
+    background: #a020f0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
     display: none;
     position: absolute;
@@ -113,6 +113,15 @@ nav>label::after {
     flex-direction: column;
 }
 
+#navigation li>span>label+i {
+    transition: transform .01s ease-out;
+}
+
+#dropdown-btn:checked~label+i {
+    transform: translateY(2px);
+}
+
+/* 
 #navigation li span label::after {
     content: "\f078";
     font-family: "Fa Solid";
@@ -122,7 +131,7 @@ nav>label::after {
 
 #dropdown-btn:checked~label::after {
     transform: translateY(2px);
-}
+} */
 
 #dropdown-btn + label {
     color: #000;
@@ -133,7 +142,7 @@ nav>label::after {
 }
 
 #banner {
-    background: #a020f0;
+    background: #000;
 }
 
 #banner > h1 {
@@ -141,6 +150,12 @@ nav>label::after {
     color: #fff;
     text-align: center;
     font-size: 14vw;
+}
+
+aside#related {
+    float: left;
+    background: #000;
+
 }
 
 @media only screen and (width >=768px) {
