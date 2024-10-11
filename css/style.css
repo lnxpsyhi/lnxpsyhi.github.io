@@ -119,8 +119,8 @@ nav>label::after {
 }
 
 #dropdown-btn:checked~label+i {
-    transform:translateY(100%);
-    opacity: 0;
+    transform:translateY(25%);
+    opacity: .5;
 }
 
 /* 
