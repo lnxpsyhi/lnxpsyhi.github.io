@@ -49,6 +49,7 @@ nav>label::after {
     box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
     padding: .25rem;
     color: #fff;
+    font-size: x-large;
 }
 
 #navigation {
@@ -142,18 +143,6 @@ nav>label::after {
     font-size: 14vw;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    background: #000;
-    width: 100%;
-}
-
-footer>.wrapper {
-    text-align: center;
-    color: #fff;
-}
-
 @media only screen and (width >=768px) {
     nav {
         position: unset;
@@ -174,7 +163,7 @@ footer>.wrapper {
     }
 
     #navigation li>span>i[class*="fa"] {
-        color: #a020f0;
+        color: #fff;
     }
 
     #navigation span i {
