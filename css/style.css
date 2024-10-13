@@ -83,7 +83,7 @@ nav {
 
 #navigation li>span>.dropdown {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 #navigation li>span>.dropdown>.dropdown-menu {
