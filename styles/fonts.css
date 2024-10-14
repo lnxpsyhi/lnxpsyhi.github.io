@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Fa Brands";
+    src: url(/assets/icons/webfonts/fa-brands-400.woff), url(/assets/icons/webfonts/fa-brands-400.woff2);
+}
+
+@font-face {
+    font-family: "Fa Regular";
+    src: url(/assets/icons/webfonts/fa-regular-400.woff), url(/assets/icons/webfonts/fa-regular-400.woff2);
+}
+
+@font-face {
+    font-family: "Fa Solid";
+    src: url(/assets/icons/webfonts/fa-solid-900.woff), url(/assets/icons/webfonts/fa-solid-900.woff2);
+}
