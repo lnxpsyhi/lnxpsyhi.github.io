@@ -3,7 +3,7 @@
 
 :root {
     --header-bg: #E2DAD6;
-    --body-bg: fff; 
+    --body-bg: fff;
     --footer-bg: #F5EFFF;
     --dark-theme-color: #000;
     --nav-anchor-color: purple;
@@ -251,7 +251,7 @@ footer a {
     column-gap: .5rem;
 }
 
-@media only screen and (width >=576px) {
+@media only screen and (width >=768px) {
 
     body {
         display: grid;
@@ -262,16 +262,51 @@ footer a {
         height: 100vh;
     }
 
+    header {
+        flex-direction: row-reverse;
+    }
+
+    .nav-link {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        justify-content: unset;
+        align-items: unset;
+        text-align: unset;
+        position: unset;
+        height: unset;
+        width: unset;
+        left: unset;
+        background: unset;
+        -webkit-backdrop-filter: unset;
+        backdrop-filter: unset;
+        transition: all .2s ease-in-out;
+        opacity: unset;
+        z-index: 999;
+        padding: 0;
+    }
+
     #title {
         font-size: 18px;
-        padding: 1rem;
     }
 
     #nav-btn+label {
         display: none;
     }
 
+    .nav-link li {
+        padding: 1.2rem;
+        width: 100%;
+    }
+
     #theme-btn+label::after {
+        font-size: 24px;
+    }
+
+}
+
+@media only screen and (width >=992px) {
+    #title {
         font-size: 24px;
     }
 }
