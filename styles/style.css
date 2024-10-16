@@ -156,11 +156,22 @@ header>span.theme>input {
     appearance: none;
 }
 
+#theme-btn+label {
+    width: 24px;
+}
+
 #theme-btn+label::after {
     content: "\f185";
     font-family: "Fa Solid";
     color: #624E88;
     margin: 1rem;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color .2s ease-out;
+}
+
+#theme-btn:focus-within+label::after {
+    color: yellow;
 }
 
 #theme-btn:checked~label::after {
