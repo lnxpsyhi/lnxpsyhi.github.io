@@ -1,35 +1,40 @@
 @charset "UTF-8";
 @import url(fonts.css);
 
+:root {
+    --header-bg: #E2DAD6;
+    --body-bg: fff; 
+    --footer-bg: #F5EFFF;
+    --dark-theme-color: #000;
+    --nav-anchor-color: purple;
+    --anchor-hover-color: #fff;
+    --nav-btn-color: purple;
+}
+
 body {
     display: grid;
     grid-template-areas:
-    "nav"
-    "fact"
-    "main"
-    "aside"
-    "footer";
+        "nav"
+        "fact"
+        "main"
+        "aside"
+        "footer";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--body-bg);
 }
 
 header {
     grid-area: nav;
-    background-color: #E2DAD6;
+    background-color: var(--header-bg);
     position: sticky;
     top: 0;
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
 nav {
     position: relative;
-}
-
-header>h2 {
-    text-align: center;
-    width: 100%;
-    background: linear-gradient(to right, #624E88, #8967B3, #CB80AB);
-    background-clip: text;
-    color: transparent;
 }
 
 .toggle {
@@ -48,7 +53,7 @@ header>h2 {
     position: absolute;
     height: 2px;
     width: 20px;
-    background-color: purple;
+    background-color: var(--nav-btn-color);
     transition: .2s ease;
 }
 
@@ -123,8 +128,8 @@ header>h2 {
     width: 100%;
 }
 
-.nav-link li:hover > a {
-    color: #fff;
+.nav-link li:hover>a {
+    color: var(--anchor-hover-color);
 }
 
 .nav-link li:hover {
@@ -132,8 +137,38 @@ header>h2 {
 }
 
 .nav-link a {
-    color: purple;
+    color: var(--nav-anchor-color);
     text-decoration: none;
+}
+
+header>span>h2 {
+    background: linear-gradient(to right, #624E88, #8967B3, #CB80AB);
+    background-clip: text;
+    color: transparent;
+}
+
+header>span.theme>input {
+    appearance: none;
+}
+
+#theme-btn+label::after {
+    content: "\f185";
+    font-family: "Fa Solid";
+    color: #624E88;
+}
+
+#theme-btn:checked~label::after {
+    content: "\f186";
+}
+
+:root:has(#theme-btn:checked) {
+    --header-bg: #000;
+    --body-bg: #2E073F;
+    --footer-bg: #000;
+    --dark-theme-color: #fff;
+    --nav-anchor-color: #fff;
+    --anchor-hover-color: yellow;
+    --nav-btn-color: blueviolet;
 }
 
 #fact-info {
@@ -142,10 +177,14 @@ header>h2 {
     flex-direction: column;
     align-items: center;
     margin: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    background: rgba(245, 239, 255, .1);
+    color: var(--dark-theme-color);
+    border: 1px solid rgba(0, 0, 0, .1);
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
 }
 
-#fact-info figure, ul {
+#fact-info figure,
+ul {
     padding: 2rem;
 }
 
@@ -160,22 +199,26 @@ header>h2 {
 
 main {
     grid-area: main;
+    padding: 1rem;
+    color: var(--dark-theme-color);
 }
 
 aside {
     grid-area: aside;
+    padding: 1rem;
+    color: var(--dark-theme-color);
 }
 
 footer {
     grid-area: footer;
-    background-color: #F5EFFF;
+    background-color: var(--footer-bg);
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: .7rem;
-    text-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    color: var(--dark-theme-color);
 }
 
 footer a {
@@ -187,14 +230,14 @@ footer a:hover {
     color: purple;
 }
 
-@media only screen and (width >= 576px) {
+@media only screen and (width >=576px) {
 
     body {
         display: grid;
         grid-template-areas:
-        "nav nav nav"
-        "fact main aside"
-        "footer footer footer";
+            "nav nav nav"
+            "fact main aside"
+            "footer footer footer";
         height: 100vh;
     }
 }
