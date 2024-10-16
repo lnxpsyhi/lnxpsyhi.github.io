@@ -36,7 +36,8 @@ header {
 
 #title {
     margin: 0 auto;
-    text-wrap: nowrap;
+    /* text-wrap: nowrap; */
+    font-size: 14px;
 }
 
 nav {
@@ -167,7 +168,7 @@ header>span.theme>input {
     font-family: "Fa Solid";
     color: #624E88;
     margin: 1rem;
-    font-size: 24px;
+    font-size: 18px;
     cursor: pointer;
     transition: color .2s ease-out;
 }
@@ -261,7 +262,16 @@ footer a {
         height: 100vh;
     }
 
+    #title {
+        font-size: 18px;
+        padding: 1rem;
+    }
+
     #nav-btn+label {
         display: none;
+    }
+
+    #theme-btn+label::after {
+        font-size: 24px;
     }
 }
