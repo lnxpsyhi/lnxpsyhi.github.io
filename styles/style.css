@@ -231,13 +231,20 @@ header>span.theme>input {
     margin: 1rem;
     background: rgba(245, 239, 255, .1);
     color: var(--dark-theme-color);
-    border: 1px solid rgba(0, 0, 0, .1);
     /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
 }
 
 #fact-info figure,
 ul {
     padding: 2rem;
+}
+
+#fact-info>figure {
+    border: 1px solid;
+}
+
+#fact-info figure>figcaption {
+    text-align: center;
 }
 
 #fact-info img {
@@ -268,22 +275,23 @@ main p {
     color: var(--dark-theme-color);
 }
 
-#article-1>figure>img {
-    animation: fade-in linear;
-    animation-timeline: view();
-    animation-range: cover contain;
-    aspect-ratio: 16/9;
-    padding: 1rem;
-}
+@media (prefers-reduced-motion: no-preference) {
 
-@keyframes fade-in {
-    from {
+    #article-1>figure>img {
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: contain 100px;
+        aspect-ratio: 16/9;
+        padding: 1rem;
         scale: .9;
         opacity: 0;
     }
-    to {
-        scale: 1;
-        opacity: 1;
+
+    @keyframes fade-in {
+        to {
+            scale: 1;
+            opacity: 1;
+        }
     }
 }
 
@@ -403,6 +411,7 @@ footer a {
         border-left: 1px solid rgba(0, 0, 0, .1);
         font-size: 18px;
     }
+
     /* #theme-btn+label::after {
         font-size: 24px;
     } */
