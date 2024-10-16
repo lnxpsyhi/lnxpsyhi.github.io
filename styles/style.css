@@ -9,6 +9,7 @@
     --nav-anchor-color: purple;
     --anchor-hover-color: #fff;
     --nav-btn-color: purple;
+    --nav-btn-bg: #fff;
 }
 
 body {
@@ -33,6 +34,10 @@ header {
     align-items: center;
 }
 
+#title {
+    margin: 0 auto;
+}
+
 nav {
     position: relative;
 }
@@ -44,9 +49,9 @@ nav {
     z-index: 2;
     cursor: pointer;
     border-radius: 2px;
-    background-color: #fff;
+    background-color: var(--nav-btn-bg);
     box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
-    margin: .5rem;
+    margin: 1.5rem;
 }
 
 .toggle .common {
@@ -155,6 +160,7 @@ header>span.theme>input {
     content: "\f185";
     font-family: "Fa Solid";
     color: #624E88;
+    margin: 1rem;
 }
 
 #theme-btn:checked~label::after {
@@ -168,7 +174,8 @@ header>span.theme>input {
     --dark-theme-color: #fff;
     --nav-anchor-color: #fff;
     --anchor-hover-color: yellow;
-    --nav-btn-color: blueviolet;
+    --nav-btn-color: #fff;
+    --nav-btn-bg: #CB80AB;
 }
 
 #fact-info {
