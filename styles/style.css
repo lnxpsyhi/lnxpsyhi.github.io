@@ -231,18 +231,15 @@ header>span.theme>input {
     margin: 1rem;
     background: rgba(245, 239, 255, .1);
     color: var(--dark-theme-color);
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem;
     /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
 }
 
-#fact-info figure,
+/* #fact-info figure,
 ul {
     padding: 2rem;
-}
-
-#fact-info>figure {
-    border: 1px solid;
-}
-
+} */
 #fact-info figure>figcaption {
     text-align: center;
 }
@@ -255,7 +252,6 @@ ul {
 #fact-info ul {
     list-style-type: none;
     border-top: 1px solid rgba(0, 0, 0, .1);
-    margin: .5rem;
 }
 
 main {
@@ -275,12 +271,23 @@ main p {
     color: var(--dark-theme-color);
 }
 
+#article-1>figure {
+    margin: .5rem;
+    /* border-radius: 5px;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1); */
+}
+
+#article-1>figure>figcaption {
+    text-align: center;
+}
+
 @media (prefers-reduced-motion: no-preference) {
 
     #article-1>figure>img {
         animation: fade-in linear forwards;
         animation-timeline: view();
-        animation-range: contain 100px;
+        animation-range: cover contain;
         aspect-ratio: 16/9;
         padding: 1rem;
         scale: .9;
@@ -394,7 +401,6 @@ footer a {
         border-top: none;
         border-left: none;
         border-bottom: none;
-        border-right: 1px solid rgba(0, 0, 0, .1);
         font-size: 18px;
     }
 
