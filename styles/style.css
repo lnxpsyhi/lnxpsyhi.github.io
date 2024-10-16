@@ -36,6 +36,7 @@ header {
 
 #title {
     margin: 0 auto;
+    text-wrap: nowrap;
 }
 
 nav {
@@ -258,5 +259,9 @@ footer a {
             "fact main aside"
             "footer footer footer";
         height: 100vh;
+    }
+
+    #nav-btn+label {
+        display: none;
     }
 }
