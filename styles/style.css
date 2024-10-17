@@ -290,7 +290,7 @@ main p {
         animation: fade-in linear forwards;
         animation-timeline: view();
         animation-range: cover contain;
-        aspect-ratio: 16/9;
+        /* aspect-ratio: 16/9; */
         padding: 1rem;
         scale: .9;
         opacity: 0;
