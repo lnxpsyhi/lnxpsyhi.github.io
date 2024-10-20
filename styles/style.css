@@ -180,7 +180,7 @@ nav {
     background-color:#F5EFFF;
 } */
 
-.nav-link li>a {
+.nav-link>li>a {
     text-wrap: nowrap;
 }
 
@@ -193,6 +193,12 @@ nav {
     border: none;
     color: var(--nav-btn-color);
     cursor: pointer;
+    text-wrap: nowrap;
+}
+
+.dropdown-btn::after {
+    content: "\f0d7";
+    font-family: "Fa Solid";
 }
 
 .dropdown {
@@ -203,6 +209,10 @@ nav {
 .dropdown-menu {
     display: flex;
     flex-direction: column;
+}
+
+.dropdown-btn:focus-within+.dropdown {
+    display: block;
 }
 
 .nav-link a {
@@ -465,6 +475,9 @@ footer a {
         background: #F5EFFF;
         box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
         position: absolute;
+        padding: .5rem;
+        z-index: 2;
+
     }
 
     #fact-info {
