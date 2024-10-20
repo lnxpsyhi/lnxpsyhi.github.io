@@ -71,20 +71,39 @@ body {
 header {
     grid-area: nav;
     background-color: var(--header-bg);
-    display: flex;
+    display: grid;
+    grid-template-areas: "navigation title";
+    grid-template-columns: max-content auto;
+    align-items: center;
     position: sticky;
     top: 0;
-    flex-direction: row;
-    align-items: center;
     z-index: 1;
 }
 
 #title {
     font-size: 14px;
+    grid-area: title;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#title>h2 {
+    background: linear-gradient(to right, #2E073F, #CB80AB);
+    background-clip: text;
+    color: transparent;
+}
+
+/* #title>h2 {
+    background: linear-gradient(to right, #624E88, #8967B3, #CB80AB);
+    background-clip: text;
+    color: transparent;
+} */
 
 nav {
     position: relative;
+    grid-area: navigation;
 }
 
 .toggle {
@@ -220,12 +239,6 @@ nav {
     text-decoration: none;
 }
 
-header>span>h2 {
-    background: linear-gradient(to right, #624E88, #8967B3, #CB80AB);
-    background-clip: text;
-    color: transparent;
-}
-
 header>span.theme>input {
     appearance: none;
 }
@@ -312,10 +325,10 @@ main p {
 .works li {
     display: flex;
     flex-direction: column;
+    border: 1px solid;
 }
 
 .works li>.wrapper {
-    border: 1px solid;
     overflow: hidden;
 }
 
@@ -330,11 +343,11 @@ main p {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    #feature>.works img  {
+    #feature>.works img {
         width: 100%;
         transition: transform .1s linear;
     }
-    
+
     #feature>.works li:hover img {
         transform: scale(1.2);
     }
@@ -428,11 +441,8 @@ footer a {
     }
 
     header {
-        flex-direction: row-reverse;
-    }
-
-    #title {
-        margin: 0 auto;
+        grid-template-areas: "title navigation";
+        grid-template-columns: auto max-content;
     }
 
     .nav-link {
@@ -456,6 +466,7 @@ footer a {
     }
 
     #title {
+        justify-content: flex-start;
         font-size: 18px;
     }
 
@@ -507,7 +518,7 @@ footer a {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: .5rem;
     }
-    
+
     #feature>.works img {
         max-height: 280px;
     }
