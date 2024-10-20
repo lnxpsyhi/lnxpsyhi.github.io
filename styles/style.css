@@ -52,6 +52,8 @@ h6 {
     --anchor-hover-color: #fff;
     --nav-btn-color: purple;
     --nav-btn-bg: #fff;
+    --dropdown-menu-bg: purple;
+    --dropdown-menu-color: #fff;
 }
 
 body {
@@ -94,12 +96,6 @@ header {
     background-clip: text;
     color: transparent;
 }
-
-/* #title>h2 {
-    background: linear-gradient(to right, #624E88, #8967B3, #CB80AB);
-    background-clip: text;
-    color: transparent;
-} */
 
 nav {
     position: relative;
@@ -195,17 +191,13 @@ nav {
     width: 100%;
 }
 
-/* .nav-link li:hover {
-    background-color:#F5EFFF;
-} */
-
 .nav-link>li>a {
     text-wrap: nowrap;
 }
 
-/* .nav-link li:hover>a {
-    color: var(--anchor-hover-color);
-} */
+.nav-link a:hover {
+    color: yellow;
+}
 
 .dropdown-btn {
     background: none;
@@ -222,20 +214,29 @@ nav {
 
 .dropdown {
     display: none;
-    background-color: black;
+    background-color: var(--dropdown-menu-bg);
 }
 
 .dropdown-menu {
     display: flex;
     flex-direction: column;
+
+}
+
+.dropdown-menu>li>a {
+    color: var(--dropdown-menu-color);
+
 }
 
 .dropdown-btn:focus-within+.dropdown {
     display: block;
 }
 
-.nav-link a {
+.nav-link>li>a {
     color: var(--nav-anchor-color);
+}
+
+.nav-link a {
     text-decoration: none;
 }
 
@@ -253,21 +254,10 @@ header>span.theme>input {
         --anchor-hover-color: yellow;
         --nav-btn-color: #fff;
         --nav-btn-bg: #CB80AB;
+        --dropdown-menu-bg: #fff;
+        --dropdown-menu-color: purple;
     }
 }
-
-/* @media (prefers-color-scheme: light) {
-    .light-theme {
-        --header-bg: #E2DAD6;
-        --body-bg: fff;
-        --footer-bg: #E2DAD6;
-        --dark-theme-color: #000;
-        --nav-anchor-color: purple;
-        --anchor-hover-color: #fff;
-        --nav-btn-color: purple;
-        --nav-btn-bg: #fff;
-    }
-} */
 
 #fact-info {
     grid-area: fact;
@@ -280,6 +270,7 @@ header>span.theme>input {
     border: 1px solid rgba(0, 0, 0, .1);
     padding: 1rem;
     border-radius: 5px;
+    max-height: fit-content;
 }
 
 #fact-info figure>figcaption {
@@ -353,53 +344,6 @@ main p {
     }
 }
 
-/* 
-#article-1 {
-    grid-area: article;
-    margin: 1rem;
-    color: var(--dark-theme-color);
-    padding: 1rem;
-}
-
-#article-1>figure>figcaption {
-    text-align: center;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-
-    #article-1>figure>img {
-        max-height: 70vh;
-        margin: 0 auto;
-        display: block;
-        animation: fade-in linear forwards;
-        animation-timeline: view();
-        animation-range: entry 150px;
-        padding: 1rem;
-        transform: translateX(-15px);
-        opacity: 0;
-    }
-
-    @keyframes fade-in {
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    #article-1>h2, #article-1>p {
-        animation: text-in linear .2s forwards;
-        animation-timeline: view();
-        animation-range: entry 300px;
-        opacity: 0;
-    }
-
-    @keyframes text-in {
-        to {
-            opacity: 1;
-        }
-    }
-} */
-
 aside {
     grid-area: aside;
     padding: 1rem;
@@ -442,12 +386,14 @@ footer a {
 
     header {
         grid-template-areas: "title navigation";
-        grid-template-columns: auto max-content;
+        grid-template-columns: auto auto;
     }
 
     .nav-link {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
         list-style-type: none;
         justify-content: unset;
         align-items: unset;
@@ -461,7 +407,6 @@ footer a {
         backdrop-filter: unset;
         transition: all .2s ease-in-out;
         opacity: unset;
-        z-index: 999;
         padding: 0;
     }
 
@@ -474,17 +419,12 @@ footer a {
         display: none;
     }
 
-    .nav-link>li {
-        padding: 1.2rem;
-        width: 100%;
-    }
-
     .dropdown-menu {
         display: flex;
         flex-direction: column;
         list-style-type: none;
-        background: #F5EFFF;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+        background: var(--dropdown-menu-bg);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
         position: absolute;
         padding: .5rem;
         z-index: 2;
