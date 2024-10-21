@@ -25,6 +25,9 @@ header {
     background-color: #E2DAD6;
     padding: .5rem;
     gap: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 #back-btn {
@@ -64,7 +67,10 @@ main {
     align-items: center;
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
 }
 
 .card {
@@ -78,6 +84,14 @@ main {
     width: 100%;
     max-width: 200px;
     padding: .5rem;
+    filter: grayscale(55%);
+    transition: filter .5s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    transform: rotate(5deg);
+}
+
+.card img:hover {
+    filter: grayscale(0);
 }
 
 .description {

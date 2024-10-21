@@ -1,0 +1,11 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+}
+
+.wrapper img {
+    width: 100%;
+    max-width: 200px;
+}
+
